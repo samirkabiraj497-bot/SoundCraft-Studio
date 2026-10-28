@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: soundcraft-studio
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SUPABASE_URL
+        value: https://ktmlcfeqlgwbclcfcoqr.supabase.co
+      - key: SUPABASE_PUBLISHABLE_KEY
+        value: sb_publishable_8BXUPKsn8g0dYaUS7luGJQ_EXpLdt5O
+      - key: SUPABASE_ANON_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt0bWxjZmVxbGd3YmNsY2Zjb3FyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMxNzY2NTUsImV4cCI6MjEwODc1MjY1NX0.J-doaTMXW_swc5tb_mtIBCPx1U5TDA9Qxavm9_F4DEw
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt0bWxjZmVxbGd3YmNsY2Zjb3FyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMxNzY2NTUsImV4cCI6MjEwODc1MjY1NX0.J-doaTMXW_swc5tb_mtIBCPx1U5TDA9Qxavm9_F4DEw
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
